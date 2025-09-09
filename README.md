@@ -1,13 +1,33 @@
 # React Side Effects Lab
 
 ## Overview
-This lab demonstrates how to handle **side effects** in React using the `useEffect` hook. The app fetches and displays a random **programming joke** when the page loads and allows users to fetch a new joke with a button click.
+This project is a simple React application that demonstrates how to handle side effects, such as fetching data from an API, using the `useEffect` hook. The app fetches and displays a random programming joke when the page loads and allows users to fetch a new joke by clicking a button. It also includes loading and error states to provide feedback to the user during asynchronous operations.
+
+## Features
+- Fetches and displays a random programming joke on page load
+- Allows user to request a new joke with a button
+- Displays loading message while fetching
+- Handles API errors gracefully
+- All functionality tested using Vitest
+
+## Technologies Used
+- React (with useEffect and useState hooks)
+- Vite (for project setup and dev server)
+- Vitest (for testing)
+- JokeAPI (for joke data)
 
 ## Setup
 
+First, clone the repository:
+
+```
+git clone git@github.com:walbeck85/react-side-effects-vite.git
+cd react-side-effects-vite
+```
+
 Run `npm install` to install dependencies.
 
-Then, run `npm run dev` to start up the React app at `http://localhost:5173`.
+Then, run `npm run dev` to start the development server. The app will open at a port like `http://localhost:5173` or similar depending on your environment.
 
 In another tab, run `npm run test` to run the test suite.
 
@@ -29,3 +49,17 @@ Before you start building out the application, examine the current code and comp
 - Manage component state using the `useState` hook.
 - Keep components modular and reusable.
 - Remove unnecessary console logs and commented-out code before submission.
+
+## Testing
+
+To run the test suite:
+```
+npm run test
+```
+
+All functionality is tested to ensure the joke displays on load, updates when the button is clicked, and shows a loading message appropriately.
+
+
+## Screenshots
+
+![App Screenshot](https://imgur.com/a/l3jDdMn)
