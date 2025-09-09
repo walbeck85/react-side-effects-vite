@@ -19,18 +19,15 @@ function App() {
   // It's reused both on initial mount and on button clicks.
   const fetchJoke = () => {
     setLoading(true); // Indicate loading state before the fetch begins
-    console.log("Fetching joke...");
     fetch('https://v2.jokeapi.dev/joke/Programming?type=single')
       .then((res) => res.json())
       .then((data) => {
-        console.log("API Response:", data);
         setJoke(data.joke);     // Update joke state with fetched joke
         setLoading(false);      // Turn off loading once joke is fetched
       })
       .catch((error) => {
         setJoke('Oops! Something went wrong.'); // Fallback message
         setLoading(false);      // Turn off loading even if there's an error
-        console.error(error);   // Log the error for debugging
       });
   };
 
