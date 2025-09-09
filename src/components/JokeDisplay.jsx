@@ -1,10 +1,14 @@
-// Step 1: Accept `joke` and `loading` as props
+// JokeDisplay receives the current joke and loading status as props from App.
+// It decides what to display based on the loading state.
 
+// Conditionally render either the loading message or the joke
+// This ensures the component shows only one message at a time
 const JokeDisplay = ({ joke, loading }) => {
   return (
     <div className="joke-container">
-      {/* Step 2: If `loading` is true, display "Loading..." */}
-      {/* Step 3: Otherwise, display the joke */}
+      <p>
+        {loading ? 'Loading...' : joke}
+      </p>
     </div>
   )
 }

@@ -1,9 +1,8 @@
-// Step 1: Accept `fetchJoke` as a prop
-
 const FetchButton = ({ fetchJoke }) => {
   return (
-    // Step 2: Add an onClick event that calls `fetchJoke`
-    <button className="fetch-button">Get a New Joke</button>
+    // Button to trigger fetching a new joke
+    // We use an onClick handler to call the function passed down from the parent component
+    <button className="fetch-button" onClick={fetchJoke}>Get a New Joke</button>
   )
 }
 
